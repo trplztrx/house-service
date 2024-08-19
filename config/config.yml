@@ -1,0 +1,10 @@
+postgres:
+    host: "postgres"
+    port: 5432
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    db: ${POSTGRES_DB}
+    db-timeout-sec: 5
+
+secret:
+    key: ${SECRET_KEY}

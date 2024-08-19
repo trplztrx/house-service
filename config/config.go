@@ -37,15 +37,12 @@ func ReadConfig() (*Config, error) {
 
     err = cleanenv.ReadConfig(configPath, &cfg)
     if err != nil {
-        fmt.Println("Error reading config file:", err)
         return nil, fmt.Errorf("read config error: %v", err)
     }
     err = cleanenv.ReadEnv(&cfg)
     if err != nil {
-        fmt.Println("Error reading environment variables:", err)
         return nil, fmt.Errorf("read env error: %v", err)
     }
 
-    fmt.Println("Config successfully loaded:", cfg)
     return &cfg, nil
 }
